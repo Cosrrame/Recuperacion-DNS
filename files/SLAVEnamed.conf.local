@@ -14,3 +14,8 @@ zone "informatica.ies.test" {
     file "/etc/bind/zones/db.informatica.ies.test"; 
     masters { 192.168.57.10; };  # IP del servidor maestro
 };
+zone "db.aulas.ies.test" {
+    type slave;
+    file "/etc/bind/zones/db.aulas.ies.test"; 
+    masters { 192.168.57.10; };  # IP del servidor maestro
+};

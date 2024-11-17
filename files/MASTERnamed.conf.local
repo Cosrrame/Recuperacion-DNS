@@ -11,3 +11,7 @@ zone "informatica.ies.test" {
     type master;
     file "/etc/bind/zones/db.informatica.ies.test";
 };
+zone "db.aulas.ies.test" {
+    type master;
+    file "/etc/bind/zones/db.aulas.ies.test";
+};
