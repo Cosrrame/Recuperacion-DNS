@@ -31,6 +31,8 @@ Vagrant.configure("2") do |config|
       dnsa.vm.provision "shell", inline: <<-SHELL
       sudo cp -v /vagrant/files/MASTER.ies.test.dns /etc/bind/MASTER.ies.test.dns
       sudo cp -v /vagrant/files/MASTERnamed.conf.local /etc/bind/named.conf.local
+      sudo mkdir /etc/bind/zones
+      sudo cp -v /vagrant/files/db.192.168.57 /etc/bind/zones/db.192.168.57
       sudo systemctl restart bind9
     SHELL
   end

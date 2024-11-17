@@ -3,3 +3,7 @@ zone "ies.test" {
     file "/etc/bind/MASTER.ies.test.dns";
     allow-transfer { 192.168.57.11; };  # IP del servidor esclavo si es necesario
 };
+zone "57.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/db.192.168.57"; 
+};

@@ -4,4 +4,8 @@ zone "ies.test" {
     masters { 192.168.57.10; };  # IP del servidor maestro
 };
 
-
+zone "57.168.192.in-addr.arpa" {
+	type slave;
+	file "/etc/bind/zones/db.192.168.57";
+	masters { 192.168.57.10; };
+};

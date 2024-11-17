@@ -1,0 +1,11 @@
+$TTL 604800
+@	IN  SOA ns1.ies.test. admin.ies.test. (
+        2023110801	; Serial
+        604800		; Refresh
+        86400		; Retry
+        2419200		; Expire
+        604800 )	; Negative Cache TTL
+
+@	IN  NS		ns1.ies.test.
+@	IN  PTR		ns1.ies.test.
+10 IN PTR dnsa.ies.test.
