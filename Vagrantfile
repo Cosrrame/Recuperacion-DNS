@@ -35,6 +35,7 @@ Vagrant.configure("2") do |config|
       sudo cp -v /vagrant/files/db.192.168.57 /etc/bind/zones/db.192.168.57
       sudo cp -v /vagrant/files/db.informatica.ies.test /etc/bind/zones/db.informatica.ies.test
       sudo cp -v /vagrant/files/db.aulas.ies.test /etc/bind/zones/db.aulas.ies.test
+      sudo cp -v /vagrant/files/db.departamentos.ies.test /etc/bind/zones/db.departamentos.ies.test
       sudo systemctl restart bind9
     SHELL
   end
