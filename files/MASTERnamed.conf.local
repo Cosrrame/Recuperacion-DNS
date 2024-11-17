@@ -19,3 +19,12 @@ zone "departamentos.ies.test" {
     type master;
     file "/etc/bind/zones/db.departamentos.ies.test";
 };
+logging {
+    channel default_log {
+        file "/var/log/named/default.log";
+        severity info;
+        print-time yes;
+    };
+
+    category queries { default_log; };
+};
