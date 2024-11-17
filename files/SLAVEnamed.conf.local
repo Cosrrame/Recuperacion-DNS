@@ -9,3 +9,8 @@ zone "57.168.192.in-addr.arpa" {
 	file "/etc/bind/zones/db.192.168.57";
 	masters { 192.168.57.10; };
 };
+zone "informatica.ies.test" {
+    type slave;
+    file "/etc/bind/zones/db.informatica.ies.test"; 
+    masters { 192.168.57.10; };  # IP del servidor maestro
+};

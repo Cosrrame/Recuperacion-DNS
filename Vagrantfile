@@ -24,15 +24,17 @@ Vagrant.configure("2") do |config|
 
     # Configuración específica del proveedor VirtualBox
     dnsa.vm.provider "virtualbox" do |vb|
-      vb.memory = "512"
+      vb.memory = "1024"
     end
 
     # Copiar archivos de configuración de zona
       dnsa.vm.provision "shell", inline: <<-SHELL
       sudo cp -v /vagrant/files/MASTER.ies.test.dns /etc/bind/MASTER.ies.test.dns
       sudo cp -v /vagrant/files/MASTERnamed.conf.local /etc/bind/named.conf.local
-      sudo mkdir /etc/bind/zones
+      sudo mkdir -p /etc/bind/zones
       sudo cp -v /vagrant/files/db.192.168.57 /etc/bind/zones/db.192.168.57
+      sudo cp -v /vagrant/files/db.informatica.ies.test /etc/bind/zones/db.informatica.ies.test
+
       sudo systemctl restart bind9
     SHELL
   end
@@ -50,7 +52,7 @@ Vagrant.configure("2") do |config|
 
     # Configuración específica del proveedor VirtualBox
     dnsb.vm.provider "virtualbox" do |vb|
-      vb.memory = "512"
+      vb.memory = "1024"
     end
 
     # Copiar archivos de configuración de zona
