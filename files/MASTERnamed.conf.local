@@ -1,0 +1,5 @@
+zone "ies.test" {
+    type master;
+    file "/etc/bind/MASTER.ies.test.dns";
+    allow-transfer { 192.168.57.11; };  # IP del servidor esclavo si es necesario
+};
